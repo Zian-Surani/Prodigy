@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Page | Zian Surani</title>
+<link href="Styles.css" rel="stylesheet" type="text/css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+    </style>
+    <script>
+    function checkPassword()
+        {
+            let pw = document.getElementById("txtPassword").value;
+            let cpw = document.getElementById("txtConfirmPassword").value;
+            if(pw != cpw)
+                {
+                    alert("Password and Confirm Password should be the same! Please check again!!");
+                    event.preventDefault();
+                }
+        }
+    </script>
+</head>
+<body>
+    <h2> MY LOGIN PAGE</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form>
+			<h1>Create an Account!</h1>
+					
+			<input type="text" placeholder="Name" name="txtName" id = "txtName"/>
+			<input type="email" placeholder="Email" required name="txtEmail" id="txtEmail"/>
+			<input type="password" placeholder="Password" id="txtPassword" name="txtPassword" required/>
+            	<input type="password" placeholder="Confirm Password" id="txtConfirmPassword" name="txtConfirmPassword"/>
+            <input type="number" placeholder="Contact Number" name="txtContactNo" id="txtContactNo" pattern="[0-9]{10}" required />        
+            
+			<input type="submit" value="Sign Up" onClick="checkPassword()" id="btnSignUp" name="btnSignUp">
+            <a href="#">Home</a>
+		</form>
+        
+	</div>
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>Sign In</h1>
+		 
+			<input type="email" id="txtEmail" name="txtEmail" placeholder="Email" />
+			<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<input type="submit" value="Sign In" name="btnSubmit">
+            <br>
+            <a href="#">Back to Home</a>
+        </form>
+         
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome !</h1>
+				<p>To keep connected with us please login with your personal info</p>
+                
+				<input type="submit" class="ghost" id="signIn" value="Sign In">
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Greetings !! </h1>
+				<p>Enter your personal details and register with us !!</p>
+                 
+				<input type="submit" class="ghost" id="signUp" value="Sign Up"> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    
+    const signUpButton = document.getElementById('signUp');
+	const signInButton = document.getElementById('signIn');
+	const container = document.getElementById('container');
+
+	signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+	});
+
+	signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+	});
+</script>
+</body>
+</html>
