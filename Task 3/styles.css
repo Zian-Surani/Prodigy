@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to bottom, #000202, #434444);
+    background-size: 400% 400%;
+    animation: gradient 10s ease-in-out infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease;
+    max-width: 400px;
+    margin: 40px auto;
+  }
+  
+  .container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px #c7b5be;
+    animation: shine 2s ease-in-out infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      text-shadow: 0 0 10px #e4e0e2;
+    }
+    50% {
+      text-shadow: 0 0 20px #d1c5cb;
+    }
+    100% {
+      text-shadow: 0 0 10px #b8afb4;
+    }
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s ease;
+  }
+  
+  .board:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #bcbcbbce, #161616);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+  }
+  
+  .cell:hover {
+    background-image: linear-gradient(to bottom, #070808, #fdf61cc3);
+    transform: scale(1.1);
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+  }
+  
+  button:hover {
+    background-color: #8bfbfaca;
+  }
+  
+  #message {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  #win-sound {
+    display: none;
+  }
