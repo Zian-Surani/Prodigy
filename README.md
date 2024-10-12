@@ -80,7 +80,7 @@ This repository contains the tasks assigned during the Prodigy Internship for we
 
 1. Clone this repository to your local machine using the command:
    ```
-   git clone https://github.com/yourusername/prodigy-internship-webdev.git
+   git clone https://github.com/Zian-Surani/Prodigy.git
    ```
 
 2. Navigate to each task folder and open the respective `index.html` files in your browser.
