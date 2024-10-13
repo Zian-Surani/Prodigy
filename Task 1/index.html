@@ -1,87 +1,173 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Login Page | Zian Surani</title>
-<link href="Styles.css" rel="stylesheet" type="text/css">
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-    </style>
-    <script>
-    function checkPassword()
-        {
-            let pw = document.getElementById("txtPassword").value;
-            let cpw = document.getElementById("txtConfirmPassword").value;
-            if(pw != cpw)
-                {
-                    alert("Password and Confirm Password should be the same! Please check again!!");
-                    event.preventDefault();
-                }
-        }
-    </script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>THE PAGE</title>
 </head>
+
 <body>
-    <h2> MY LOGIN PAGE</h2>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form>
-			<h1>Create an Account!</h1>
-					
-			<input type="text" placeholder="Name" name="txtName" id = "txtName"/>
-			<input type="email" placeholder="Email" required name="txtEmail" id="txtEmail"/>
-			<input type="password" placeholder="Password" id="txtPassword" name="txtPassword" required/>
-            	<input type="password" placeholder="Confirm Password" id="txtConfirmPassword" name="txtConfirmPassword"/>
-            <input type="number" placeholder="Contact Number" name="txtContactNo" id="txtContactNo" pattern="[0-9]{10}" required />        
-            
-			<input type="submit" value="Sign Up" onClick="checkPassword()" id="btnSignUp" name="btnSignUp">
-            <a href="#">Home</a>
-		</form>
-        
+	<nav>
+		<div class="heading">THE PAGE</div>
+		<span class="sideMenuButton" onclick="openNavbar()">
+			
+		</span>
+
+		<div class="navbar">
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Sign Up</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Side navigation bar for
+		responsive website -->
+	<div class="sideNavigationBar"
+		id="sideNavigationBar">
+		<a href="#" class="closeButton"
+			onclick="closeNavbar()">
+			
+		</a>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Sign Up</a>
 	</div>
-	<div class="form-container sign-in-container">
-		<form>
-			<h1>Sign In</h1>
-		 
-			<input type="email" id="txtEmail" name="txtEmail" placeholder="Email" />
-			<input type="password" id="txtPassword" name="txtPassword" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<input type="submit" value="Sign In" name="btnSubmit">
-            <br>
-            <a href="#">Back to Home</a>
-        </form>
-         
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome !</h1>
-				<p>To keep connected with us please login with your personal info</p>
-                
-				<input type="submit" class="ghost" id="signIn" value="Sign In">
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Greetings !! </h1>
-				<p>Enter your personal details and register with us !!</p>
-                 
-				<input type="submit" class="ghost" id="signUp" value="Sign Up"> 
-			</div>
+
+	<!-- Content -->
+	<div class="line" id="Home">
+		<div class="side1">
+			<h1>THIS IS THE PAGE !!</h1>
+			<button>
+				<a href="">
+					Explore More
+				</a>
+			</button>
+		</div>
+		<div class="side2">
+			<img src=
+            https://wallpaperaccess.com/full/178816.jpg
+				width="500">
 		</div>
 	</div>
-</div>
 
-<script>
-    
-    const signUpButton = document.getElementById('signUp');
-	const signInButton = document.getElementById('signIn');
-	const container = document.getElementById('container');
+	<section class="about" id="My Projects">
+		<div class="content">
+			<div class="title">
+				<span>Scroll Ahead !!</span>
+			</div>
+			<div class="boxes">
+				<div class="box">
+					<div class="topic">
+						<a href="" target="_blank">
+							BOX 1
+						</a>
+					</div>
+					<br>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veritatis qui id. 
+					</p>
+				</div>
+				<div class="box">
 
-	signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-	});
+					<div class="topic">
+						<a href="" target="_blank">
+							BOX 2
+						</a>
+					</div>
+					<br>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veritatis qui id. 
+					</p>
+				</div>
 
-	signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-	});
-</script>
+				<div class="box">
+					<div class="topic">
+						<a href="" target="_blank">
+							BOX 3
+						</a>
+					</div><br>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis veritatis qui id. 
+                    
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="content">
+			<div class="titl"><span>REGISTER !!</span></div>
+			<div class="contactMenu">
+				<div class="input1">
+					<div class="label1">User Name</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Name here">
+					</div>
+					
+					<div class="label1">
+						<label>Password</label>
+					</div>
+					<div class="input2">
+						<input type="text"
+							placeholder="Enter your Password here">
+					</div>
+					<div class="button">
+						<button>Login</button>
+					</div>
+                    <br>
+                    <div>
+                        <span>
+                            New User?
+                            <a href="" target="_blank" class="reg">
+                                Register Here
+                            </a>
+                        </span>
+                    </div>
+
+				</div>
+				<div class="input3">
+					<div class="rightside1">
+						<div class="title1">
+							<span>
+								Contact Us
+							</span>
+						</div>
+						<div class="content1">
+							In your dreams :)<br>
+							
+						</div>
+						<div class="title1">
+							<span>More Information</span>
+						</div>
+						<div class="content1">
+							THIS IS A LANDING PAGE MADE WITH LL BASICS OF HTML AND CSS
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer section -->
+	<footer>
+		<div class="footer">
+			<span>
+				Created By
+				<a href=""
+					target="_blank">
+					Zian Surani
+				</a>
+			</span>
+		</div>
+	</footer>
+	<script src="land.js"></script>
 </body>
+
 </html>
