@@ -4,8 +4,8 @@ This repository contains the tasks assigned during the Prodigy Internship for we
 
 ## Tasks Overview
 
-### Task 1: Sign-In Page
-**Objective:** Create a user-friendly sign-in page.
+### Task 1: Sign-In Page / Landing Page
+**Objective:** Create a user-friendly sign-in page to land on.
 
 **Features:**
 - A simple form with inputs for username/email and password.
